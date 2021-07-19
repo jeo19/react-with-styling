@@ -18,8 +18,8 @@ const StyledButton = styled.button`
   height: 2.25rem;
   font-size: 1rem;
   /* color */
-  ${(props) => {
-    const selected = props.theme.palette[props.color];
+  ${({ theme, color }) => {
+    const selected = theme.palette[color];
     return css`
       background: ${selected};
       &:hover {
@@ -36,8 +36,12 @@ const StyledButton = styled.button`
     margin-left: 1rem;
   }
 `;
-function Button({ children, ...rest }) {
-  return <StyledButton {...rest}>{children}</StyledButton>;
+function Button({ children, color, ...rest }) {
+  return (
+    <StyledButton color={color} {...rest}>
+      {children}
+    </StyledButton>
+  );
 }
 Button.defaultProps = {
   color: 'blue',
