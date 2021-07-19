@@ -22,8 +22,9 @@ function App() {
       }}
     >
       <AppBlock>
-        <Button>Button</Button>
-        
+        <Button>Blue</Button>
+        <Button color="gray">Gray</Button>
+        <Button color="pink">Pink</Button>
       </AppBlock>
     </ThemeProvider>
   );
