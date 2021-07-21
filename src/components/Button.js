@@ -16,7 +16,26 @@ const colorStyles = css`
     `;
   }}
 `;
-
+const sizeStyles = css`
+  ${(props) =>
+    props.size === 'large' &&
+    css`
+      height: 3rem;
+      font-size: 1.25rem;
+    `}
+  ${(props) =>
+    props.size === 'medium' &&
+    css`
+      height: 2.25rem;
+      font-size: 1rem;
+    `}
+    ${(props) =>
+    props.size === 'small' &&
+    css`
+      height: 2rem;
+      font-size: 1rem;
+    `}
+`;
 const StyledButton = styled.button`
   /* common style */
   display: inline-flex;
@@ -30,8 +49,7 @@ const StyledButton = styled.button`
   padding-right: 1rem;
 
   /* size */
-  height: 2.25rem;
-  font-size: 1rem;
+  ${sizeStyles}
 
   /* color */
   ${colorStyles}
@@ -41,9 +59,9 @@ const StyledButton = styled.button`
     margin-left: 1rem;
   }
 `;
-function Button({ children, color, ...rest }) {
+function Button({ children, color, size, ...rest }) {
   return (
-    <StyledButton color={color} {...rest}>
+    <StyledButton color={color} size={size} {...rest}>
       {children}
     </StyledButton>
   );
