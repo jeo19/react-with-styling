@@ -32,8 +32,8 @@ const sizeStyles = css`
     ${(props) =>
     props.size === 'small' &&
     css`
-      height: 2rem;
-      font-size: 1rem;
+      height: 1.75rem;
+      font-size: 0.875rem;
     `}
 `;
 const StyledButton = styled.button`
@@ -68,6 +68,7 @@ function Button({ children, color, size, ...rest }) {
 }
 Button.defaultProps = {
   color: 'blue',
+  size: 'medium',
 };
 
 export default Button;
