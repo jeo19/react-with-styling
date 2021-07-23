@@ -47,6 +47,18 @@ const sizeStyles = css`
     font-size: ${sizes[size].fontSize};
   `}
 `;
+const fullWidthStyle = css`
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+      justify-content: center;
+      & + & {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
+    `}
+`;
 const StyledButton = styled.button`
   /* common style */
   display: inline-flex;
@@ -69,6 +81,8 @@ const StyledButton = styled.button`
   & + & {
     margin-left: 1rem;
   }
+  /* width */
+  ${fullWidthStyle}
 `;
 function Button({ children, color, size, outline, ...rest }) {
   return (
