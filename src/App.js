@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import Button from './components/Button';
+import Dialog from './components/Dialog';
 
 const AppBlock = styled.div`
   width: 512px;
@@ -26,44 +27,49 @@ function App() {
         },
       }}
     >
-      <AppBlock>
-        <ButtonGroup>
-          <Button size="large">Button</Button>
-          <Button>Button</Button>
-          <Button size="small">Button</Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button color="gray" size="large">
-            Button
-          </Button>
-          <Button color="gray">Button</Button>
-          <Button color="gray" size="small">
-            Button
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button color="pink" size="large" outline>
-            Button
-          </Button>
-          <Button color="pink" outline>
-            Button
-          </Button>
-          <Button color="pink" size="small" outline>
-            Button
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button size="large" fullWidth>
-            Button
-          </Button>
-          <Button color="gray" size="large" fullWidth>
-            Button
-          </Button>
-          <Button color="pink" size="large" fullWidth>
-            Button
-          </Button>
-        </ButtonGroup>
-      </AppBlock>
+      <>
+        <AppBlock>
+          <ButtonGroup>
+            <Button size="large">Button</Button>
+            <Button>Button</Button>
+            <Button size="small">Button</Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button color="gray" size="large">
+              Button
+            </Button>
+            <Button color="gray">Button</Button>
+            <Button color="gray" size="small">
+              Button
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button color="pink" size="large" outline>
+              Button
+            </Button>
+            <Button color="pink" outline>
+              Button
+            </Button>
+            <Button color="pink" size="small" outline>
+              Button
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button size="large" fullWidth>
+              Button
+            </Button>
+            <Button color="gray" size="large" fullWidth>
+              Button
+            </Button>
+            <Button color="pink" size="large" fullWidth>
+              Button
+            </Button>
+          </ButtonGroup>
+        </AppBlock>
+        <Dialog title="Do you want to remove?" confirmText="Confirm" cancelText="Cancel">
+          Do you want to remove the data?
+        </Dialog>
+      </>
     </ThemeProvider>
   );
 }

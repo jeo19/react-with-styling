@@ -41,8 +41,8 @@ function Dialog({ title, children, confirmText, cancelText }) {
         <h3>{title}</h3>
         <p>{children}</p>
         <ButtonGroup>
-          <Button color="gray">{cancelText}</Button>
-          <Button color="pink">{confirmText}</Button>
+          <Button color="gray">{confirmText}</Button>
+          <Button color="pink">{cancelText}</Button>
         </ButtonGroup>
       </DialogBlock>
     </DarkBackground>
