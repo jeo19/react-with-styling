@@ -30,39 +30,48 @@ function App() {
       <>
         <AppBlock>
           <ButtonGroup>
-            <Button size="large">Button</Button>
-            <Button>Button</Button>
-            <Button size="small">Button</Button>
+            <Button size="large">BUTTON</Button>
+            <Button>BUTTON</Button>
+            <Button size="small">BUTTON</Button>
           </ButtonGroup>
           <ButtonGroup>
             <Button color="gray" size="large">
-              Button
+              BUTTON
             </Button>
-            <Button color="gray">Button</Button>
+            <Button color="gray">BUTTON</Button>
             <Button color="gray" size="small">
-              Button
+              BUTTON
             </Button>
           </ButtonGroup>
           <ButtonGroup>
-            <Button color="pink" size="large" outline>
-              Button
+            <Button color="pink" size="large">
+              BUTTON
             </Button>
-            <Button color="pink" outline>
-              Button
+            <Button color="pink">BUTTON</Button>
+            <Button color="pink" size="small">
+              BUTTON
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button size="large" outline>
+              BUTTON
+            </Button>
+            <Button color="gray" outline>
+              BUTTON
             </Button>
             <Button color="pink" size="small" outline>
-              Button
+              BUTTON
             </Button>
           </ButtonGroup>
           <ButtonGroup>
             <Button size="large" fullWidth>
-              Button
+              BUTTON
             </Button>
-            <Button color="gray" size="large" fullWidth>
-              Button
+            <Button size="large" color="gray" fullWidth>
+              BUTTON
             </Button>
-            <Button color="pink" size="large" fullWidth>
-              Button
+            <Button size="large" color="pink" fullWidth>
+              BUTTON
             </Button>
           </ButtonGroup>
         </AppBlock>
