@@ -11,12 +11,22 @@ const AppBlock = styled.div`
   padding: 1rem;
 `;
 const ButtonGroup = styled.div`
-  & + & {
+  &:not(:first-child) {
     margin-top: 1rem;
   }
 `;
 
 function App() {
+  const [dialog, setDialog] = useState(false);
+  const onClick = () => {
+    setDialog(true);
+  };
+  const onConfirm = () => {
+    setDialog(false);
+  };
+  const onCancel = () => {
+    setDialog(false);
+  };
   return (
     <ThemeProvider
       theme={{
@@ -70,12 +80,19 @@ function App() {
             <Button size="large" color="gray" fullWidth>
               BUTTON
             </Button>
-            <Button size="large" color="pink" fullWidth>
-              BUTTON
+            <Button size="large" color="pink" fullWidth onClick={onClick}>
+              Remove
             </Button>
           </ButtonGroup>
         </AppBlock>
-        <Dialog title="Do you want to remove?" confirmText="Confirm" cancelText="Cancel">
+        <Dialog
+          title="Do you want to remove?"
+          confirmText="Confirm"
+          cancelText="Cancel"
+          onConfirm={onConfirm}
+          onCancel={onCancel}
+          visible={dialog}
+        >
           Do you want to remove the data?
         </Dialog>
       </>

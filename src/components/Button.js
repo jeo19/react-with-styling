@@ -78,7 +78,7 @@ const StyledButton = styled.button`
   ${colorStyles}
 
   /* other */
-  & + & {
+  &:not(:first-child) {
     margin-left: 1rem;
   }
   /* width */
